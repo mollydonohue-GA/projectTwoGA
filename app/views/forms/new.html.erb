@@ -1,0 +1,12 @@
+<!-- <div id="modal"> -->
+<%= form_for(Form.new) do |form| %>
+  <p><%= form.label("Date") %></p>
+  <p><%= form.text_field("date") %></p>
+  <p><%= form.label("Wins") %></p>
+  <p><%= form.text_area("wins") %></p>
+  <p><%= form.label("Repass") %></p>
+  <p><%= form.text_area("repass") %></p>
+  <p><%= form.submit %></p>
+<% end %>
+<!-- </div> -->
+<p><%= link_to("Back to all Stand Ups", forms_path) %></p>

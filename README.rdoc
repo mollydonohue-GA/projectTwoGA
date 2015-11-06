@@ -1,0 +1,102 @@
+== README
+
+Creating Rails App:
+
+In console run -> rails new stand_up_app -d postgresql 
+
+	-> bundle install
+
+Implimenting Devise:
+~ Devise creates user login feature
+
+~~ THANKS JOE JUNG ~~ 
+~~ thanks rails girls ~~
+
+	Resource- http://guides.railsgirls.com/devise/
+
+	Add devise Gem
+
+		Open up your Gemfile and add this line
+
+			gem 'devise'
+		
+		from command line run
+
+			bundle install
+
+	Set up devise in App
+
+		from command line run
+
+			rails g devise:install
+
+	Configure Devise
+
+		Ensure you have defined default url options in your environments files. Open up config/environments/development.rb and before the end keyword add this line:
+
+			config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+		Open up app/views/layouts/application.html.erb and right above <%= yield %> add:
+
+			<% if notice %>
+			  <p class="alert alert-success"><%= notice %></p>
+			<% end %>
+			<% if alert %>
+			  <p class="alert alert-danger"><%= alert %></p>
+			<% end %>
+
+	Setup the User model
+
+		Use a bundled generator script to create the User model.
+
+		From command line execute:
+
+			rails g devise user
+
+			rake db:create
+
+   			rake db:migrate
+
+   	Check for success 
+
+   		From new command line
+
+   			rails s
+
+   		From web browser 
+
+   			http://localhost:3000/users/sign_up
+
+   		If successful you should see a form to create a new user!
+
+   	Add sign-up and login links
+
+		Edit app/views/layouts/application.html.erb
+
+	Force the user to redirect to the login page if the user was not logged in.
+
+		Open up app/controllers/application_controller.rb and after protect_from_forgery with: :exception.add:
+
+			before_action :authenticate_user!
+
+	Configuring views
+
+		on command line run 
+
+			rails generate devise:views
+
+
+
+#########################
+
+
+
+
+
+
+
+
+
+
+
+

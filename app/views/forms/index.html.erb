@@ -1,0 +1,5 @@
+<% for form in @forms %>
+  <h2><%= link_to(form.date, form_path(form)) %></h2>
+    <p><%= form.wins %></p>
+    <p><%= form.repass %></p>
+<% end %>
