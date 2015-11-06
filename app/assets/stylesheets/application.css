@@ -17,6 +17,14 @@ body{
 	text-align: center;
 
 }
+.field{
+	font-size: 15px;
+	margin-bottom: 0px;
+}
+.date{
+	font-size: 14px;
+}
+
 
 /*#modal {
   top: 0;

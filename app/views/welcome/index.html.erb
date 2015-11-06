@@ -1,8 +1,8 @@
 <h1>Stand Up</h1>
 	<p>Let the people know how you are feeeeeeling!</p>
-	<%= link_to("New form", new_form_path) %>
+	<%= link_to("Share Your Feelings", new_form_path) %>
 <% for form in @forms %>
-  <h2><%= form.date %></h2>
+  <h2 class='date'><%= form.date %></h2>
     <p><%= form.wins %></p>
     <p><%= form.repass %></p>
 <% end %>
