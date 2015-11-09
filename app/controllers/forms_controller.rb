@@ -1,5 +1,6 @@
 class FormsController < ApplicationController
-	
+	before_action :authenticate_user!
+
 	def index
 		@forms = Form.all
 	end
@@ -9,9 +10,10 @@ class FormsController < ApplicationController
 	end
 
 def create
-	form_params = params["form"].permit("date", "wins", "repass")
-  form = Form.create(form_params)
-  redirect_to(form_path(form))
+	form_params = params["form"].permit("name", "wins", "repass", "emoji")
+  @form = Form.create(form_params)
+  @form.user_id = current_user.id
+  redirect_to(form_path(@form))
 end
 
 end

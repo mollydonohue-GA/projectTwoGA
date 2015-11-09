@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>StandUpApp</title>
+  <title>StandUp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+  <link href='https://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 	<ul class="nav">
-	</ul>
 		<p class="navbar-text pull-right">
 		<% if user_signed_in? %>
 		  Logged in as <strong><%= current_user.email %></strong>.
@@ -19,9 +19,9 @@
 		  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
 		  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 		<% end %> </p>
-<% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
+	</ul>
+
+
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>

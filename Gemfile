@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#Emoji capability 
+# gem 'gemoji'
 # bare bones style (thanks jason!)
 # gem 'skeleton-rails', '~> 0.1.0'
 # creates user login (thanks Joe!)

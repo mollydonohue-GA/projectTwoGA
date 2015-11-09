@@ -1,12 +1,24 @@
-<!-- <div id="modal"> -->
-<%= form_for(Form.new) do |form| %>
-  <p><%= form.label("Date") %></p>
-  <p><%= form.text_field("date") %></p>
-  <p><%= form.label("Wins") %></p>
-  <p><%= form.text_area("wins") %></p>
-  <p><%= form.label("Repass") %></p>
-  <p><%= form.text_area("repass") %></p>
-  <p><%= form.submit %></p>
-<% end %>
-<!-- </div> -->
+<!-- <h1 class='logo_welcome'>Stand Up</h1> -->
+
+<div class='form_spacing'>
+	<%= form_for(:form, url: '/forms', :method => 'post') do |form| %>
+	  <p><%= form.label("Name") %></p>
+	  <p><%= form.text_field("name") %></p>
+	  <p><%= form.label("Wins") %></p>
+	  <p><%= form.text_area("wins") %></p>
+	  <p><%= form.label("Repass") %></p>
+	  <p><%= form.text_area("repass") %></p>
+	  <!-- <p><%= form.label("Emoji") %></p>
+	<p><%= form.text_area("emoji") %></p> -->
+		<!-- <select>
+			<option>😄</option>
+			<option>😞</option>
+			<option>💤</option>
+		</select>  -->
+					           
+	<p> </p>
+	  <p><%= form.submit %></p>
+
+	<% end %>
+</div>
 <p><%= link_to("Back to all Stand Ups", forms_path) %></p>

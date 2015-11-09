@@ -1,6 +1,11 @@
-<%= link_to("Submit Your Feelings", new_form_path) %>
+<h1 class='logo_welcome'>Stand Up</h1>
+	
+	<p class='line'>______________________________________________________________________</p>
 <% for form in @forms %>
-  <h2 class= 'date'><%= link_to(form.date, form_path(form)) %></h2>
-    <p><%= form.wins %></p>
-    <p><%= form.repass %></p>
+	<p class='name'><%= form.name %></p>
+	<p class='subtitles'>Wins</p>
+	<p><%= form.wins %></p>
+	<p class='subtitles'>Repass</p>
+	<p><%= form.repass %></p>
+	<p class='line'>______________________________________________</p>
 <% end %>

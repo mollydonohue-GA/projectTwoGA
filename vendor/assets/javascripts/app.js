@@ -1,3 +1,1 @@
-// $("#open-modal").on("click", function() {
-//   $("#modal").toggle();
-// });
+console.log("test")
